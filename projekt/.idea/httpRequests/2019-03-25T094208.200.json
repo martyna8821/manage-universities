@@ -1,0 +1,12 @@
+[
+  {
+    "id": "d65794aa-7ca2-4709-86e2-82af2d488faf",
+    "firstName": null,
+    "lastName": null,
+    "email": "janek@mail.com",
+    "phone": "431357826",
+    "age": 21,
+    "gender": "MALE",
+    "sudentStatus": null
+  }
+]

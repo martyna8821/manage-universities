@@ -1,7 +1,0 @@
-{
-  "timestamp": "2019-03-18T21:07:44.197+0000",
-  "status": 500,
-  "error": "Internal Server Error",
-  "message": "org.hibernate.hql.internal.ast.QuerySyntaxException: university is not mapped [FROM university as u ORDER BY u.name]; nested exception is java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: university is not mapped [FROM university as u ORDER BY u.name]",
-  "path": "/university"
-}

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-03-21T10:53:10.107+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "No query defined for that name [FROM Student]; nested exception is java.lang.IllegalArgumentException: No query defined for that name [FROM Student]",
+  "path": "/student"
+}

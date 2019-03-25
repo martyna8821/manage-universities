@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-03-21T10:56:05.131+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "could not execute query; SQL [select student0_.id as id1_0_, student0_.age as age2_0_, student0_.email as email3_0_, student0_.firstname as firstnam4_0_, student0_.gender as gender5_0_, student0_.lastname as lastname6_0_, student0_.phone as phone7_0_, student0_.studentstatus as students8_0_ from student student0_]; nested exception is org.hibernate.exception.DataException: could not execute query",
+  "path": "/student"
+}

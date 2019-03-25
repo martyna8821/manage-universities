@@ -7,15 +7,13 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.lang.model.element.Name;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.util.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
-@Entity
+@Entity(name = "University")
 @Table(name = "university")
 @Getter @Setter
-//@EntityListeners(AuditingEntityListener.class)
 public class University implements Serializable {
 
     @Id
@@ -33,5 +31,15 @@ public class University implements Serializable {
     @Column(name = "phone")
     private String phone;
 
+    @OneToMany
+    private List<FieldOfStudy> fieldsOfStudy = new ArrayList<>();
+
+/*    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "university_student",
+            joinColumns = { @JoinColumn(name = "id_u") },
+            inverseJoinColumns = { @JoinColumn(name = "id_s") }
+    )
+    Set<Student> students = new HashSet<>();*/
 
 }
