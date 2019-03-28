@@ -5,7 +5,8 @@
     "addistionDate": "2019-03-18T20:22:18.182+0000",
     "address": "Gliwice ",
     "email": "polsl@mail.com",
-    "phone": "12332312"
+    "phone": "12332312",
+    "fieldsOfStudy": []
   },
   {
     "id": "26858e07-85c2-4619-96de-382ca3101fde",
@@ -13,6 +14,7 @@
     "addistionDate": "2019-02-22T20:22:58.927+0000",
     "address": "Katowice",
     "email": "ue@mail.com",
-    "phone": "5424352345"
+    "phone": "5424352345",
+    "fieldsOfStudy": []
   }
 ]

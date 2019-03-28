@@ -11,6 +11,8 @@ import pl.martyna.universities.model.enums.StudentStatus;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -42,5 +44,12 @@ public class Student implements Serializable {
     @Column(columnDefinition = "studentstatus_t", name = "studentstatus")
     private StudentStatus studentStatus;
 
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "university_student",
+            joinColumns = { @JoinColumn(name = "id_u") },
+            inverseJoinColumns = { @JoinColumn(name = "id_s") }
+    )
+    Set<FieldOfStudy> fieldOfStudy = new HashSet<>();
 
 }

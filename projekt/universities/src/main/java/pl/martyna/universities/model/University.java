@@ -32,14 +32,15 @@ public class University implements Serializable {
     private String phone;
 
     @OneToMany
+    @JoinColumn(name = "universityid")
     private List<FieldOfStudy> fieldsOfStudy = new ArrayList<>();
 
-/*    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "university_student",
             joinColumns = { @JoinColumn(name = "id_u") },
             inverseJoinColumns = { @JoinColumn(name = "id_s") }
     )
-    Set<Student> students = new HashSet<>();*/
+    Set<Student> students = new HashSet<>();
 
 }

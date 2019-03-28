@@ -1,0 +1,28 @@
+[
+  {
+    "id": "525a22d1-5620-40f4-aef1-ed15c76a01b0",
+    "name": "POLSL",
+    "addistionDate": "2019-03-18T20:22:18.182+0000",
+    "address": "Gliwice ",
+    "email": "polsl@mail.com",
+    "phone": "12332312",
+    "fieldsOfStudy": [
+      {
+        "id": "0666747e-28ff-4b4e-bfc2-ee2bc0986fe1",
+        "nameOfStudyField": "infa",
+        "startDate": "2019-03-22",
+        "studentsLimit": 200,
+        "grade": 4.0
+      }
+    ]
+  },
+  {
+    "id": "26858e07-85c2-4619-96de-382ca3101fde",
+    "name": "UE",
+    "addistionDate": "2019-02-22T20:22:58.927+0000",
+    "address": "Katowice",
+    "email": "ue@mail.com",
+    "phone": "5424352345",
+    "fieldsOfStudy": []
+  }
+]
