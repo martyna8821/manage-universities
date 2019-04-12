@@ -7,7 +7,8 @@
     "phone": "7657",
     "age": 26,
     "gender": "MALE",
-    "studentStatus": "ACTIVE"
+    "studentStatus": "ACTIVE",
+    "fieldOfStudy": []
   },
   {
     "id": "b42d50df-a798-4fb2-ab33-8de547be51e3",
@@ -17,6 +18,7 @@
     "phone": "7868",
     "age": 87,
     "gender": "FEMALE",
-    "studentStatus": "DEANS_LEAVE"
+    "studentStatus": "DEANS_LEAVE",
+    "fieldOfStudy": []
   }
 ]

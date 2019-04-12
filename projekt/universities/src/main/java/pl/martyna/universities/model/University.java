@@ -43,4 +43,8 @@ public class University implements Serializable {
     )
     Set<Student> students = new HashSet<>();
 
+
+    public void setId(int id){
+        this.id = UUID.fromString(Integer.toString(id));
+    }
 }

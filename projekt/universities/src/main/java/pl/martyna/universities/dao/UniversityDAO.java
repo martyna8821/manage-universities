@@ -34,7 +34,8 @@ public class UniversityDAO  implements IUniversityDAO {
 
     @Override
     public void addUniversity(University university) {
-        entityManager.merge(university);
+
+        entityManager.persist(university);
     }
 
     @Override

@@ -13,6 +13,7 @@ public interface IUniversityService {
     Optional<University> getUniversityById(UUID univesityId);
     void addUniversity(University university);
     void updateUniversity(University university);
-    void deleteUniversity(UUID univesityId);
+    void deleteUniversityById(UUID univesityId);
     boolean universityExists(String name);
+    String name();
 }

@@ -8,17 +8,25 @@
       <ObjectId>16385</ObjectId>
       <StateNumber>569</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>846</IntrospectionStateNumber>
+      <IntrospectionStateNumber>922</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </database>
-    <database id="3" parent="1" name="postgres">
+    <database id="3" parent="1" name="lotto">
+      <ObjectId>16852</ObjectId>
+      <StateNumber>921</StateNumber>
+      <Owner>admin</Owner>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="postgres">
       <ObjectId>13102</ObjectId>
       <Comment>default administrative connection database</Comment>
       <StateNumber>566</StateNumber>
       <Owner>postgres</Owner>
+      <IntrospectionStateNumber>920</IntrospectionStateNumber>
+      <Visible>1</Visible>
     </database>
-    <role id="4" parent="1" name="admin">
+    <role id="5" parent="1" name="admin">
       <ObjectId>16386</ObjectId>
       <SuperRole>1</SuperRole>
       <Inherit>1</Inherit>
@@ -27,47 +35,47 @@
       <CanLogin>1</CanLogin>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="5" parent="1" name="pg_execute_server_program">
+    <role id="6" parent="1" name="pg_execute_server_program">
       <ObjectId>4571</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="6" parent="1" name="pg_monitor">
+    <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="7" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="8" parent="1" name="pg_read_all_stats">
+    <role id="9" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="9" parent="1" name="pg_read_server_files">
+    <role id="10" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="10" parent="1" name="pg_signal_backend">
+    <role id="11" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="11" parent="1" name="pg_stat_scan_tables">
+    <role id="12" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="12" parent="1" name="pg_write_server_files">
+    <role id="13" parent="1" name="pg_write_server_files">
       <ObjectId>4570</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="13" parent="1" name="postgres">
+    <role id="14" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <Inherit>1</Inherit>
@@ -78,43 +86,43 @@
       <ConnectionLimit>-1</ConnectionLimit>
       <BypassRls>1</BypassRls>
     </role>
-    <schema id="14" parent="2" name="information_schema">
+    <schema id="15" parent="2" name="information_schema">
       <ObjectId>12807</ObjectId>
       <StateNumber>365</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="15" parent="2" name="pg_catalog">
+    <schema id="16" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
       <StateNumber>358</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="16" parent="2" name="pg_temp_1">
+    <schema id="17" parent="2" name="pg_temp_1">
       <ObjectId>11804</ObjectId>
       <StateNumber>120</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="17" parent="2" name="pg_toast">
+    <schema id="18" parent="2" name="pg_toast">
       <ObjectId>99</ObjectId>
       <Comment>reserved schema for TOAST tables</Comment>
       <StateNumber>1</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="18" parent="2" name="pg_toast_temp_1">
+    <schema id="19" parent="2" name="pg_toast_temp_1">
       <ObjectId>11805</ObjectId>
       <StateNumber>120</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="19" parent="2" name="public">
+    <schema id="20" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>847</IntrospectionStateNumber>
+      <IntrospectionStateNumber>923</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <access-method id="20" parent="2" name="btree">
+    <access-method id="21" parent="2" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -122,7 +130,7 @@
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="21" parent="2" name="hash">
+    <access-method id="22" parent="2" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -130,7 +138,7 @@
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="22" parent="2" name="gist">
+    <access-method id="23" parent="2" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -138,7 +146,7 @@
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="23" parent="2" name="gin">
+    <access-method id="24" parent="2" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -146,7 +154,7 @@
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="24" parent="2" name="spgist">
+    <access-method id="25" parent="2" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -154,7 +162,7 @@
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="25" parent="2" name="brin">
+    <access-method id="26" parent="2" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -162,7 +170,7 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="26" parent="2" name="plpgsql">
+    <extension id="27" parent="2" name="plpgsql">
       <ObjectId>13088</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>518</StateNumber>
@@ -170,7 +178,7 @@
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <extension id="27" parent="2" name="uuid-ossp">
+    <extension id="28" parent="2" name="uuid-ossp">
       <ObjectId>16426</ObjectId>
       <Comment>generate universally unique identifiers (UUIDs)</Comment>
       <StateNumber>623</StateNumber>
@@ -178,7 +186,97 @@
       <SchemaName>public</SchemaName>
       <SchemaId>2200</SchemaId>
     </extension>
-    <sequence id="28" parent="19" name="hibernate_sequence">
+    <schema id="29" parent="4" name="information_schema">
+      <ObjectId>12807</ObjectId>
+      <StateNumber>365</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="30" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>358</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="31" parent="4" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="32" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="33" parent="4" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="34" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+      <Current>1</Current>
+    </schema>
+    <access-method id="35" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="36" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="37" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="38" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="39" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="40" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="41" parent="4" name="plpgsql">
+      <ObjectId>13088</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>518</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="42" parent="20" name="hibernate_sequence">
       <ObjectId>16499</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>693</StateNumber>
@@ -186,7 +284,7 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <object-type id="29" parent="19" name="gender_t">
+    <object-type id="43" parent="20" name="gender_t">
       <ObjectId>16502</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>710</StateNumber>
@@ -195,7 +293,7 @@
       <Labels>MALE
 FEMALE</Labels>
     </object-type>
-    <object-type id="30" parent="19" name="studentstatus_t">
+    <object-type id="44" parent="20" name="studentstatus_t">
       <ObjectId>16521</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>735</StateNumber>
@@ -206,32 +304,37 @@ INACTIVE
 SUSPENDED
 DEANS_LEAVE</Labels>
     </object-type>
-    <table id="31" parent="19" name="fieldofstudy">
+    <table id="45" parent="20" name="fieldofstudy">
       <ObjectId>16451</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>673</StateNumber>
     </table>
-    <table id="32" parent="19" name="student">
+    <table id="46" parent="20" name="student">
       <ObjectId>16540</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>845</StateNumber>
+      <StateNumber>849</StateNumber>
     </table>
-    <table id="33" parent="19" name="student_field">
+    <table id="47" parent="20" name="student_field">
       <ObjectId>16482</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>683</StateNumber>
     </table>
-    <table id="34" parent="19" name="university">
+    <table id="48" parent="20" name="university">
       <ObjectId>16444</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>692</StateNumber>
     </table>
-    <table id="35" parent="19" name="university_student">
+    <table id="49" parent="20" name="university_fields_of_study">
+      <ObjectId>16557</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>855</StateNumber>
+    </table>
+    <table id="50" parent="20" name="university_student">
       <ObjectId>16463</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>678</StateNumber>
     </table>
-    <routine id="36" parent="19" name="uuid_generate_v1">
+    <routine id="51" parent="20" name="uuid_generate_v1">
       <ObjectId>16432</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -242,7 +345,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="37" parent="19" name="uuid_generate_v1mc">
+    <routine id="52" parent="20" name="uuid_generate_v1mc">
       <ObjectId>16433</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -253,7 +356,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="38" parent="19" name="uuid_generate_v3">
+    <routine id="53" parent="20" name="uuid_generate_v3">
       <ObjectId>16434</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -264,7 +367,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="39" parent="19" name="uuid_generate_v4">
+    <routine id="54" parent="20" name="uuid_generate_v4">
       <ObjectId>16435</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -275,7 +378,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="40" parent="19" name="uuid_generate_v5">
+    <routine id="55" parent="20" name="uuid_generate_v5">
       <ObjectId>16436</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -286,7 +389,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="41" parent="19" name="uuid_nil">
+    <routine id="56" parent="20" name="uuid_nil">
       <ObjectId>16427</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -297,7 +400,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="42" parent="19" name="uuid_ns_dns">
+    <routine id="57" parent="20" name="uuid_ns_dns">
       <ObjectId>16428</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -308,7 +411,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="43" parent="19" name="uuid_ns_oid">
+    <routine id="58" parent="20" name="uuid_ns_oid">
       <ObjectId>16430</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -319,7 +422,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="44" parent="19" name="uuid_ns_url">
+    <routine id="59" parent="20" name="uuid_ns_url">
       <ObjectId>16429</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -330,7 +433,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <routine id="45" parent="19" name="uuid_ns_x500">
+    <routine id="60" parent="20" name="uuid_ns_x500">
       <ObjectId>16431</ObjectId>
       <Owner>admin</Owner>
       <StateNumber>623</StateNumber>
@@ -341,7 +444,7 @@ DEANS_LEAVE</Labels>
       <Strict>1</Strict>
       <Cost>1.0</Cost>
     </routine>
-    <column id="46" parent="31" name="id">
+    <column id="61" parent="45" name="id">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
@@ -349,56 +452,56 @@ DEANS_LEAVE</Labels>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <TypeId>2950</TypeId>
     </column>
-    <column id="47" parent="31" name="universityid">
+    <column id="62" parent="45" name="universityid">
       <Position>2</Position>
       <DataType>uuid|0s</DataType>
       <StateNumber>673</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="48" parent="31" name="nameofstudyfield">
+    <column id="63" parent="45" name="nameofstudyfield">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>673</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="49" parent="31" name="startdate">
+    <column id="64" parent="45" name="startdate">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <StateNumber>673</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="50" parent="31" name="studentslimit">
+    <column id="65" parent="45" name="studentslimit">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>673</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="31" name="grade">
+    <column id="66" parent="45" name="grade">
       <Position>6</Position>
       <DataType>real|0s</DataType>
       <StateNumber>673</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <index id="52" parent="31" name="fieldofstudy_id_uindex">
+    <index id="67" parent="45" name="fieldofstudy_id_uindex">
       <ObjectId>16460</ObjectId>
       <StateNumber>674</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="53" parent="31" name="fieldofstudy_pk">
+    <index id="68" parent="45" name="fieldofstudy_pk">
       <ObjectId>16461</ObjectId>
       <StateNumber>675</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="31" name="fieldofstudy_pk">
+    <key id="69" parent="45" name="fieldofstudy_pk">
       <ObjectId>16462</ObjectId>
       <StateNumber>675</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>fieldofstudy_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="55" parent="31" name="fieldofstudy_university_id_fk">
+    <foreign-key id="70" parent="45" name="fieldofstudy_university_id_fk">
       <ObjectId>16455</ObjectId>
       <StateNumber>673</StateNumber>
       <ColNames>universityid</ColNames>
@@ -409,7 +512,7 @@ DEANS_LEAVE</Labels>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="56" parent="32" name="id">
+    <column id="71" parent="46" name="id">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
@@ -417,74 +520,80 @@ DEANS_LEAVE</Labels>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <TypeId>2950</TypeId>
     </column>
-    <column id="57" parent="32" name="firstname">
+    <column id="72" parent="46" name="firstname">
       <Position>2</Position>
       <DataType>varchar(40)|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="32" name="lastname">
+    <column id="73" parent="46" name="lastname">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="32" name="email">
+    <column id="74" parent="46" name="email">
       <Position>4</Position>
       <DataType>varchar(40)|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="60" parent="32" name="phone">
+    <column id="75" parent="46" name="phone">
       <Position>5</Position>
       <DataType>varchar(40)|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="32" name="age">
+    <column id="76" parent="46" name="age">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="62" parent="32" name="avragegrade">
+    <column id="77" parent="46" name="avragegrade">
       <Position>7</Position>
       <DataType>real|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="63" parent="32" name="gender">
+    <column id="78" parent="46" name="gender">
       <Position>8</Position>
       <DataType>gender_t|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>16502</TypeId>
     </column>
-    <column id="64" parent="32" name="studentstatus">
+    <column id="79" parent="46" name="studentstatus">
       <Position>9</Position>
       <DataType>studentstatus_t|0s</DataType>
       <StateNumber>828</StateNumber>
       <TypeId>16521</TypeId>
     </column>
-    <index id="65" parent="32" name="s_id_uindex">
+    <column id="80" parent="46" name="student_status">
+      <Position>10</Position>
+      <DataType>studentstatus_t|0s</DataType>
+      <StateNumber>849</StateNumber>
+      <TypeId>16521</TypeId>
+    </column>
+    <index id="81" parent="46" name="s_id_uindex">
       <ObjectId>16544</ObjectId>
       <StateNumber>829</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="66" parent="32" name="s_pk">
+    <index id="82" parent="46" name="s_pk">
       <ObjectId>16545</ObjectId>
       <StateNumber>830</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="67" parent="32" name="s_pk">
+    <key id="83" parent="46" name="s_pk">
       <ObjectId>16546</ObjectId>
       <StateNumber>830</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>s_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="68" parent="33" name="id">
+    <column id="84" parent="47" name="id">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
@@ -492,40 +601,40 @@ DEANS_LEAVE</Labels>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <TypeId>2950</TypeId>
     </column>
-    <column id="69" parent="33" name="id_s">
+    <column id="85" parent="47" name="id_s">
       <Position>2</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>683</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="70" parent="33" name="id_f">
+    <column id="86" parent="47" name="id_f">
       <Position>3</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>683</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <index id="71" parent="33" name="student_field_id_uindex">
+    <index id="87" parent="47" name="student_field_id_uindex">
       <ObjectId>16496</ObjectId>
       <StateNumber>684</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="72" parent="33" name="student_field_pk">
+    <index id="88" parent="47" name="student_field_pk">
       <ObjectId>16497</ObjectId>
       <StateNumber>685</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="73" parent="33" name="student_field_pk">
+    <key id="89" parent="47" name="student_field_pk">
       <ObjectId>16498</ObjectId>
       <StateNumber>685</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>student_field_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="74" parent="33" name="student_field_s_id_fk">
+    <foreign-key id="90" parent="47" name="student_field_s_id_fk">
       <ObjectId>16547</ObjectId>
       <StateNumber>835</StateNumber>
       <ColNames>id_s</ColNames>
@@ -536,7 +645,7 @@ DEANS_LEAVE</Labels>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="75" parent="33" name="student_field_fieldofstudy_id_fk">
+    <foreign-key id="91" parent="47" name="student_field_fieldofstudy_id_fk">
       <ObjectId>16491</ObjectId>
       <StateNumber>683</StateNumber>
       <ColNames>id_f</ColNames>
@@ -547,7 +656,7 @@ DEANS_LEAVE</Labels>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="76" parent="34" name="id">
+    <column id="92" parent="48" name="id">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
@@ -555,76 +664,122 @@ DEANS_LEAVE</Labels>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <TypeId>2950</TypeId>
     </column>
-    <column id="77" parent="34" name="additiondate">
+    <column id="93" parent="48" name="additiondate">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>666</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="78" parent="34" name="name">
+    <column id="94" parent="48" name="name">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <StateNumber>666</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="79" parent="34" name="address">
+    <column id="95" parent="48" name="address">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>666</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="80" parent="34" name="email">
+    <column id="96" parent="48" name="email">
       <Position>5</Position>
       <DataType>varchar(150)|0s</DataType>
       <StateNumber>666</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="81" parent="34" name="phone">
+    <column id="97" parent="48" name="phone">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>666</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="34" name="additiontime">
+    <column id="98" parent="48" name="additiontime">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="83" parent="34" name="university_id_uindex">
+    <index id="99" parent="48" name="university_id_uindex">
       <ObjectId>16448</ObjectId>
       <StateNumber>667</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="84" parent="34" name="university_pk">
+    <index id="100" parent="48" name="university_pk">
       <ObjectId>16449</ObjectId>
       <StateNumber>668</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="85" parent="34" name="university_pk">
+    <key id="101" parent="48" name="university_pk">
       <ObjectId>16450</ObjectId>
       <StateNumber>668</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>university_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="86" parent="35" name="id_u">
+    <column id="102" parent="49" name="university_id">
+      <Position>1</Position>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>852</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="103" parent="49" name="fields_of_study_id">
+      <Position>2</Position>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>852</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="104" parent="49" name="uk_1nqt4nvdll5fpvn7vgklvombn">
+      <ObjectId>16560</ObjectId>
+      <StateNumber>854</StateNumber>
+      <ColNames>fields_of_study_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="105" parent="49" name="uk_1nqt4nvdll5fpvn7vgklvombn">
+      <ObjectId>16561</ObjectId>
+      <StateNumber>854</StateNumber>
+      <ColNames>fields_of_study_id</ColNames>
+      <UnderlyingIndexName>uk_1nqt4nvdll5fpvn7vgklvombn</UnderlyingIndexName>
+    </key>
+    <foreign-key id="106" parent="49" name="fk5ohds6hcgmmqpgnjbf5nvopoa">
+      <ObjectId>16567</ObjectId>
+      <StateNumber>856</StateNumber>
+      <ColNames>university_id</ColNames>
+      <RefTableId>16444</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>university</RefTableName>
+      <RefKeyName>university_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="107" parent="49" name="fkf4f6g25mg849crgo639hnddwj">
+      <ObjectId>16562</ObjectId>
+      <StateNumber>855</StateNumber>
+      <ColNames>fields_of_study_id</ColNames>
+      <RefTableId>16451</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>fieldofstudy</RefTableName>
+      <RefKeyName>fieldofstudy_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="108" parent="50" name="id_u">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>678</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="87" parent="35" name="id_s">
+    <column id="109" parent="50" name="id_s">
       <Position>2</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>678</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="88" parent="35" name="id">
+    <column id="110" parent="50" name="id">
       <Position>3</Position>
       <DataType>uuid|0s</DataType>
       <NotNull>1</NotNull>
@@ -632,38 +787,38 @@ DEANS_LEAVE</Labels>
       <DefaultExpression>uuid_generate_v4()</DefaultExpression>
       <TypeId>2950</TypeId>
     </column>
-    <index id="89" parent="35" name="university_student_pk">
+    <index id="111" parent="50" name="university_student_pk">
       <ObjectId>16467</ObjectId>
       <StateNumber>678</StateNumber>
       <ColNames>id_s</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="90" parent="35" name="university_student_id_uindex">
+    <index id="112" parent="50" name="university_student_id_uindex">
       <ObjectId>16479</ObjectId>
       <StateNumber>679</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="91" parent="35" name="university_student_pk_2">
+    <index id="113" parent="50" name="university_student_pk_2">
       <ObjectId>16480</ObjectId>
       <StateNumber>680</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="92" parent="35" name="university_student_pk_2">
+    <key id="114" parent="50" name="university_student_pk_2">
       <ObjectId>16481</ObjectId>
       <StateNumber>680</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>university_student_pk_2</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="93" parent="35" name="university_student_pk">
+    <key id="115" parent="50" name="university_student_pk">
       <ObjectId>16468</ObjectId>
       <StateNumber>678</StateNumber>
       <ColNames>id_s</ColNames>
       <UnderlyingIndexName>university_student_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="94" parent="35" name="university_student_university_id_fk">
+    <foreign-key id="116" parent="50" name="university_student_university_id_fk">
       <ObjectId>16469</ObjectId>
       <StateNumber>678</StateNumber>
       <ColNames>id_u</ColNames>
@@ -674,7 +829,7 @@ DEANS_LEAVE</Labels>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="95" parent="35" name="university_student_s_id_fk">
+    <foreign-key id="117" parent="50" name="university_student_s_id_fk">
       <ObjectId>16552</ObjectId>
       <StateNumber>839</StateNumber>
       <ColNames>id_s</ColNames>
@@ -685,59 +840,59 @@ DEANS_LEAVE</Labels>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <argument id="96" parent="36">
+    <argument id="118" parent="51">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="97" parent="37">
+    <argument id="119" parent="52">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="98" parent="38" name="namespace">
+    <argument id="120" parent="53" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="99" parent="38" name="name">
+    <argument id="121" parent="53" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </argument>
-    <argument id="100" parent="38">
+    <argument id="122" parent="53">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="101" parent="39">
+    <argument id="123" parent="54">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="102" parent="40" name="namespace">
+    <argument id="124" parent="55" name="namespace">
       <Position>1</Position>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="103" parent="40" name="name">
+    <argument id="125" parent="55" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </argument>
-    <argument id="104" parent="40">
+    <argument id="126" parent="55">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="105" parent="41">
+    <argument id="127" parent="56">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="106" parent="42">
+    <argument id="128" parent="57">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="107" parent="43">
+    <argument id="129" parent="58">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="108" parent="44">
+    <argument id="130" parent="59">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>
-    <argument id="109" parent="45">
+    <argument id="131" parent="60">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>uuid|0s</DataType>
     </argument>

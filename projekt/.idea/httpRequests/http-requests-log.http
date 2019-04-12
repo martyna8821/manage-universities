@@ -1,3 +1,159 @@
+GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
+
+<> 2019-04-12T080642.500.json
+
+###
+
+GET http://localhost:8080/university/{universityId}
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-12T080622.500.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-12T080440.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T080049.500.json
+
+###
+
+GET http://localhost:8080/university
+
+###
+
+GET http://localhost:8080/university
+
+###
+
+GET http://localhost:8080/university
+
+###
+
+GET http://localhost:8080/university
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075830.500.json
+
+###
+
+GET http://localhost:8080/university
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075740.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075703.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075615.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075423.200.json
+
+###
+
+GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
+
+<> 2019-04-12T075226.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075206.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T075010.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T074844.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T074822.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T074702.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T074414.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-12T074056.500.json
+
+###
+
+GET http://localhost:8080/student
+
+<> 2019-04-11T031340.200.json
+
+###
+
+POST http://localhost:8080/univesity
+
+<> 2019-04-11T030325.400.json
+
+###
+
+GET http://localhost:8080/university/26858e07-85c2-4619-96de-382ca3101fde
+
+<> 2019-04-11T030052.200.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-11T030024.200.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-03-30T111039.200.json
+
+###
+
 POST http://localhost:8080/univesity
 
 <> 2019-03-29T123632.400.json
@@ -123,170 +279,6 @@ GET http://localhost:8080/field
 GET http://localhost:8080/field
 
 <> 2019-03-25T105133.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T105055.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T105052.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T105040.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T105031.200.json
-
-###
-
-GET http://localhost:8080/university
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T102134.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T102056.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T102012.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T101713.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T101612.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T101521.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T100123.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T100052.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095947.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095915.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095526.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095347.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095213.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T095110.500.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T094855.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T094208.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T094120.500.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T093703.500.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T093434.500.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T092752.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T092549.500.json
-
-###
-
-GET http://localhost:8080/student
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-25T092440.200.json
 
 ###
 

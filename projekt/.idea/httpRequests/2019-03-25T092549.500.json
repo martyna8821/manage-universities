@@ -1,7 +1,0 @@
-{
-  "timestamp": "2019-03-25T20:25:49.953+0000",
-  "status": 500,
-  "error": "Internal Server Error",
-  "message": "No enum constant pl.martyna.universities.model.enums.Gender.male; nested exception is java.lang.IllegalArgumentException: No enum constant pl.martyna.universities.model.enums.Gender.male",
-  "path": "/student"
-}

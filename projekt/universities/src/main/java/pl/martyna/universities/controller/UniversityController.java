@@ -20,6 +20,11 @@ public class UniversityController {
     @Autowired
     private IUniversityService universityService;
 
+    @GetMapping("nerw")
+    public String nerw(){
+        return universityService.name();
+    }
+
     @GetMapping("university")
     public ResponseEntity<List<University>> getAllUniversities() {
         List<University> list = universityService.getAllUniversities();
@@ -39,7 +44,8 @@ public class UniversityController {
     }
         @PostMapping("univesity")
         public University addUniversity(@RequestBody University university){
-            universityService.addUniversity(university);
+
+        universityService.addUniversity(university);
             return university;
         }
 
@@ -52,7 +58,7 @@ public class UniversityController {
         @DeleteMapping("university/{universityId}")
         public ResponseEntity<String> deleteUniversity(@PathVariable String universityId){
         UUID id = UUID.fromString(universityId);
-        universityService.deleteUniversity(id);
+        universityService.deleteUniversityById(id);
         return ResponseEntity.ok("ok");
     }
 

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-04-12T17:44:14.454+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Hibernate cannot unwrap interface org.hibernate.SessionFactory; nested exception is javax.persistence.PersistenceException: Hibernate cannot unwrap interface org.hibernate.SessionFactory",
+  "path": "/university"
+}
