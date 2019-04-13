@@ -20,11 +20,6 @@ public class UniversityController {
     @Autowired
     private IUniversityService universityService;
 
-    @GetMapping("nerw")
-    public String nerw(){
-        return universityService.name();
-    }
-
     @GetMapping("university")
     public ResponseEntity<List<University>> getAllUniversities() {
         List<University> list = universityService.getAllUniversities();
@@ -33,35 +28,38 @@ public class UniversityController {
 
     @GetMapping("university/{universityId}")
     public ResponseEntity<?> getUniversityById(@PathVariable String universityId) {
-        UUID id = UUID.fromString(universityId);
-        Optional<University> university = universityService.getUniversityById(id);
+        UUID idToSearch = UUID.fromString(universityId);
+        Optional<University> foundUniversity = universityService.getUniversityById(idToSearch);
 
-        if (university.isPresent()) {
-            return new ResponseEntity<>(university.get(), HttpStatus.OK);
+        if (foundUniversity.isPresent()) {
+            return new ResponseEntity<>(foundUniversity.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>("University not found", HttpStatus.NOT_FOUND);
         }
     }
-        @PostMapping("univesity")
-        public University addUniversity(@RequestBody University university){
+    @PostMapping("university")
+    public University createUniversity(@RequestBody University university){
+        universityService.createUniversity(university);
+        return university;
+    }
 
-        universityService.addUniversity(university);
-            return university;
-        }
+    @PutMapping("university")
+    public University updateUniversity(@RequestBody University university){
+        universityService.updateUniversity(university);
+        return university;
+    }
 
-        @PutMapping("university")
-        public University updateUniversity(@RequestBody University university){
-            universityService.updateUniversity(university);
-            return university;
-        }
-
-        @DeleteMapping("university/{universityId}")
-        public ResponseEntity<String> deleteUniversity(@PathVariable String universityId){
-        UUID id = UUID.fromString(universityId);
-        universityService.deleteUniversityById(id);
-        return ResponseEntity.ok("ok");
+    @DeleteMapping("university")
+    public ResponseEntity<String> deleteUniversityById(@RequestBody University university){
+        universityService.deleteUniversity(university);
+        return new ResponseEntity<>("University deleted", HttpStatus.OK);
     }
 
 
-
+    @DeleteMapping("university/{universityId}")
+    public ResponseEntity<String> deleteUniversity(@PathVariable String universityId){
+        UUID idToDelete = UUID.fromString(universityId);
+        universityService.deleteUniversityById(idToDelete);
+        return new ResponseEntity<>("University deleted", HttpStatus.OK);
+    }
 }

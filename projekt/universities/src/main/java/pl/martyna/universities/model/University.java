@@ -43,8 +43,79 @@ public class University implements Serializable {
     )
     Set<Student> students = new HashSet<>();
 
+    public UUID getId() {
+        return id;
+    }
+
+    public University() {
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getAddistionDate() {
+        return addistionDate;
+    }
+
+    public void setAddistionDate(Date addistionDate) {
+        this.addistionDate = addistionDate;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public List<FieldOfStudy> getFieldsOfStudy() {
+        return fieldsOfStudy;
+    }
+
+    public void setFieldsOfStudy(List<FieldOfStudy> fieldsOfStudy) {
+        this.fieldsOfStudy = fieldsOfStudy;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
 
     public void setId(int id){
         this.id = UUID.fromString(Integer.toString(id));
+    }
+
+    @Override
+    public String toString(){
+        return "University";
     }
 }

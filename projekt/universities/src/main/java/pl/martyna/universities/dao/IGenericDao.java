@@ -8,9 +8,9 @@ public interface IGenericDao<T extends Serializable> {
 
     void setClassT(Class< T > classToSet );
 
-    T findById(final UUID id);
+    T getById(final UUID id);
 
-    List<T> findAll();
+    List<T> getAll();
 
     void create(final T entity);
 
@@ -20,5 +20,4 @@ public interface IGenericDao<T extends Serializable> {
 
     void deleteById(final UUID entityId);
 
-    String getClassName();
 }

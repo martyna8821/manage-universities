@@ -1,0 +1,1 @@
+from pl.martyna.universities.model.University

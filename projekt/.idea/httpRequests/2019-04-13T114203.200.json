@@ -14,6 +14,19 @@
         "studentsLimit": 200,
         "grade": 4.0
       }
+    ],
+    "students": [
+      {
+        "id": "5df05d2b-cd7e-43ac-9965-b1b7dd4a64a2",
+        "firstName": "wefe",
+        "lastName": "hjvj",
+        "email": "hk",
+        "phone": "7657",
+        "age": 26,
+        "gender": "MALE",
+        "studentStatus": "ACTIVE",
+        "fieldOfStudy": []
+      }
     ]
   },
   {
@@ -23,6 +36,7 @@
     "address": "Katowice",
     "email": "ue@mail.com",
     "phone": "5424352345",
-    "fieldsOfStudy": []
+    "fieldsOfStudy": [],
+    "students": []
   }
 ]

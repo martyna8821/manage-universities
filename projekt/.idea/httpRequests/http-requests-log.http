@@ -1,3 +1,99 @@
+POST http://localhost:8080/univesity
+
+<> 2019-04-14T125452.400.json
+
+###
+
+GET http://localhost:8080/student
+
+<> 2019-04-14T124031.200.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-14T123651.200.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-14T123418.200.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T123353.200.txt
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T122709.500.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T122555.500.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T122105.200.txt
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T121934.500.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-14T121804.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-14T121659.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-14T121329.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-13T115212.500.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-13T114203.200.json
+
+###
+
+GET http://localhost:8080/university
+
+<> 2019-04-13T114108.500.json
+
+###
+
+GET http://localhost:8080/nerw
+
+<> 2019-04-13T113618.500.json
+
+###
+
 GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
 
 <> 2019-04-12T080642.500.json
@@ -187,98 +283,6 @@ GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
 GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
 
 <> 2019-03-28T115418.404.json
-
-###
-
-GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
-
-<> 2019-03-28T115238.404.json
-
-###
-
-GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
-
-<> 2019-03-28T114833.404.json
-
-###
-
-GET http://localhost:8080/university/univesityId
-
-<> 2019-03-28T114741.500.json
-
-###
-
-GET http://localhost:8080/university/{univesityId}
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-28T123249.200.json
-
-###
-
-GET http://localhost:8080/university
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-28T123040.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-28T122947.200.json
-
-###
-
-GET http://localhost:8080/field
-
-<> 2019-03-28T122935.200.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-03-28T122921.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-28T122733.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-28T121718.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-25T111404.200.json
-
-###
-
-GET http://localhost:8080/field
-
-<> 2019-03-25T111359.200.json
-
-###
-
-GET http://localhost:8080/field
-
-<> 2019-03-25T105233.200.json
-
-###
-
-GET http://localhost:8080/field
-
-<> 2019-03-25T105133.200.json
 
 ###
 

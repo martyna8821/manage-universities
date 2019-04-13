@@ -4,6 +4,7 @@ import net.bytebuddy.asm.Advice;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import pl.martyna.universities.model.University;
 
 import javax.persistence.EntityManager;
@@ -12,53 +13,50 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
+@Transactional
 public abstract class AbstractDao<T extends Serializable> {
 
-    private Class<T> classT;
+    private Class< T > classT;
 
     @PersistenceContext
-    private EntityManager entityManager;
+    EntityManager entityManager;
 
-
-    public final void setClassT( Class< T > classToSet ){
+    public void setClassT( Class< T > classToSet ) {
         this.classT = classToSet;
     }
 
-    public T findById( UUID id ){
-        return entityManager.find(classT, id);
-
+    public T getById( UUID id ){
+        return entityManager.find( classT, id );
     }
-    public List< T > findAll(){
-        String query = "from "+ classT.getName();
-        System.out.println(query);
-        return (List<T>) entityManager.createQuery(query).getResultList();
-
+    public List< T > getAll(){
+        return entityManager.createQuery( "from " + classT.getName() )
+                .getResultList();
     }
 
-    public String getClassName(){
-        return "from "+ classT.getName();
 
-    }
     public void create( T entity ){
-       getCurrentSession().persist( entity );
+        entityManager.persist( entity );
     }
+
+    /** TODO
+     /*update nie updejtuje tylko dodaje, why?
+     *
+     */
+    //TODO
+    //jakiś problem z usuwaniem gdy dostanie encje tez ma, sprawdzic
+
 
     public void update( T entity ){
-        getCurrentSession().merge( entity );
+        entityManager.merge( entity );
     }
 
     public void delete( T entity ){
-        getCurrentSession().delete( entity );
+        entityManager.remove( entity );
     }
-
-    public void deleteById( UUID entityId ) {
-        T entity = findById( entityId );
+    public void deleteById( UUID entityId ){
+        T entity = getById( entityId );
         delete( entity );
     }
 
-    protected final Session getCurrentSession() {
 
-        SessionFactory sessionFactory = entityManager.unwrap(SessionFactory.class);
-       return sessionFactory.getCurrentSession();
-    }
 }

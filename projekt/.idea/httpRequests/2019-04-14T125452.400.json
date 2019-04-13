@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-04-13T22:54:52.040+0000",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Required request body is missing: public pl.martyna.universities.model.University pl.martyna.universities.controller.UniversityController.addUniversity(pl.martyna.universities.model.University)",
+  "path": "/univesity"
+}

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-04-13T22:13:29.679+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "No message available",
+  "path": "/university"
+}

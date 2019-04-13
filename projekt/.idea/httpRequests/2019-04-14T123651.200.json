@@ -24,7 +24,8 @@
         "phone": "7657",
         "age": 26,
         "gender": "MALE",
-        "studentStatus": "ACTIVE"
+        "studentStatus": "ACTIVE",
+        "fieldOfStudy": []
       }
     ]
   },
