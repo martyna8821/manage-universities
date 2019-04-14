@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import pl.martyna.universities.model.University;
 
 import javax.persistence.EntityManager;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Transactional
+@CrossOrigin(origins = "http://localhost:4220")
 public abstract class AbstractDao<T extends Serializable> {
 
     private Class< T > classT;

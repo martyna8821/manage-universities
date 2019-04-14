@@ -1,0 +1,20 @@
+ 
+    
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">nazwa</th>
+      <th scope="col">telefon</th>
+      <th scope="col">adres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let university of universities" >
+      
+      <td>{{university.name}} </td>
+      <td>{{university.phone}} </td>
+      <td>{{university.address}}</td>
+    </tr>
+   
+  </tbody>
+</table>

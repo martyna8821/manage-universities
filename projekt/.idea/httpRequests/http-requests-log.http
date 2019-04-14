@@ -1,3 +1,9 @@
+GET http://localhost:8080/university
+
+<> 2019-04-14T104804.200.json
+
+###
+
 POST http://localhost:8080/univesity
 
 <> 2019-04-14T125452.400.json
@@ -277,12 +283,6 @@ GET http://localhost:8080/university/universityId
 GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
 
 <> 2019-03-28T115445.404.json
-
-###
-
-GET http://localhost:8080/university/525a22d1-5620-40f4-aef1-ed15c76a01b0
-
-<> 2019-03-28T115418.404.json
 
 ###
 
