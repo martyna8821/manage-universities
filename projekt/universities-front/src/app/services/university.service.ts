@@ -17,10 +17,16 @@ export class UniversityService {
   constructor(private http:HttpClient) { }
 
   getUniversities(): Observable<any> {
-    return this.http.get('//localhost:8080/university');
-  //  return this.http.get<University[]>(this.baseUrl + 'university', httpOptions);
+   return this.http.get<University[]>(this.baseUrl + 'university', httpOptions);
   }
 
+  updateUniversity(university: University): Observable<University>{
+    return this.http.put<University>(this.baseUrl + 'university',university, httpOptions);
+  }
+
+  deleteUniversity(universityId: string): Observable<{}>{
+    return this.http.delete<University>(this.baseUrl + 'university/' + universityId, httpOptions);
+  }
 //   addOpinion(opinion: Opinion): Observable<Opinion> {
 //     return this.http.post<Opinion>(this.baseUrl + opinion.ratedUserId + '/' + opinion.ratingUserId + '/opinions',
 //             opinion, httpOptions);

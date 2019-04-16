@@ -15,7 +15,7 @@ import java.util.UUID;
 @RestController
 
 @RequestMapping("/")
-@CrossOrigin(origins = "http://localhost:4220")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UniversityController {
 
     @Autowired
@@ -51,16 +51,16 @@ public class UniversityController {
     }
 
     @DeleteMapping("university")
-    public ResponseEntity<String> deleteUniversityById(@RequestBody University university){
+    public HttpStatus deleteUniversityById(@RequestBody University university){
         universityService.deleteUniversity(university);
-        return new ResponseEntity<>("University deleted", HttpStatus.OK);
+        return  HttpStatus.OK;
     }
 
 
     @DeleteMapping("university/{universityId}")
-    public ResponseEntity<String> deleteUniversity(@PathVariable String universityId){
+    public HttpStatus deleteUniversity(@PathVariable String universityId){
         UUID idToDelete = UUID.fromString(universityId);
         universityService.deleteUniversityById(idToDelete);
-        return new ResponseEntity<>("University deleted", HttpStatus.OK);
+        return HttpStatus.OK;
     }
 }

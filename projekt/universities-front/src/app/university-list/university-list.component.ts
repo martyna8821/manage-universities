@@ -13,9 +13,25 @@ export class UniversityListComponent implements OnInit {
 
   constructor(private universityService: UniversityService) { }
 
+  getUniversities(){
+    this.universityService.getUniversities().subscribe(u => this.universities = u);
+  }
+
   ngOnInit() {
   
     this.universityService.getUniversities().subscribe(u => this.universities = u);
   }
+
+
+  updateUniveristy(university: University){
+    
+  }
+
+  deleteUniversity(universityId: string){
+    this.universityService.deleteUniversity(universityId).subscribe();
+    this.universityService.getUniversities().subscribe(u => this.universities = u);
+  }
+
+  
 
 }

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Transactional
-@CrossOrigin(origins = "http://localhost:4220")
+@CrossOrigin(origins = "http://localhost:4200")
 public abstract class AbstractDao<T extends Serializable> {
 
     private Class< T > classT;
