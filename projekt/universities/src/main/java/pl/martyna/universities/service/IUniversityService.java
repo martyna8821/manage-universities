@@ -15,4 +15,5 @@ public interface IUniversityService {
     void deleteUniversity(University university);
     void deleteUniversityById(UUID univesityId);
     boolean checkIfExists(String name);
+    List<University> getUniversityStudents(UUID universityId);
 }

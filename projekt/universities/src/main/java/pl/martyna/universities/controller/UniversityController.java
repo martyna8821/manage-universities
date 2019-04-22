@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
+import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
 import pl.martyna.universities.service.IUniversityService;
 
@@ -63,4 +64,13 @@ public class UniversityController {
         universityService.deleteUniversityById(idToDelete);
         return HttpStatus.OK;
     }
+
+    @GetMapping("university/{universityId}/student")
+    public ResponseEntity<List<Student>> getUniversityStudents(@PathVariable String universityId){
+        UUID universityIdToSearch = UUID.fromString(universityId);
+        List<Student> list =  universityService.getUniversityStudents(universityIdToSearch);
+        return new ResponseEntity<>(list, HttpStatus.OK);
+
+    }
+
 }

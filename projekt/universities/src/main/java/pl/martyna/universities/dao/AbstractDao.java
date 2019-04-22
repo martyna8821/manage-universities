@@ -35,18 +35,9 @@ public abstract class AbstractDao<T extends Serializable> {
                 .getResultList();
     }
 
-
     public void create( T entity ){
         entityManager.persist( entity );
     }
-
-    /** TODO
-     /*update nie updejtuje tylko dodaje, why?
-     *
-     */
-    //TODO
-    //jakiś problem z usuwaniem gdy dostanie encje tez ma, sprawdzic
-
 
     public void update( T entity ){
         entityManager.merge( entity );

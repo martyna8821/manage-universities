@@ -1,7 +1,0 @@
-{
-  "timestamp": "2019-03-28T23:12:19.048+0000",
-  "status": 500,
-  "error": "Internal Server Error",
-  "message": "Missing URI template variable 'universityId' for method parameter of type String",
-  "path": "/university/universityId"
-}

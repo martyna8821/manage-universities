@@ -3,6 +3,7 @@ package pl.martyna.universities.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.martyna.universities.dao.IGenericDao;
+import pl.martyna.universities.dao.IUniversityDao;
 import pl.martyna.universities.model.University;
 
 import java.util.List;
@@ -12,10 +13,10 @@ import java.util.UUID;
 @Service
 public class UniversityService implements IUniversityService {
 
-    private IGenericDao<University> universityDao;
+    private IUniversityDao universityDao;
 
     @Autowired
-    public void setDao( IGenericDao< University > daoToSet ){
+    public void setDao( IUniversityDao daoToSet ){
         universityDao = daoToSet;
         universityDao.setClassT(University.class);
     }
@@ -53,6 +54,11 @@ public class UniversityService implements IUniversityService {
     @Override
     public boolean checkIfExists(String name) {
         return false;
+    }
+
+    @Override
+    public List<University> getUniversityStudents(UUID universityId) {
+        return universityDao.getUniversityStudents(UUID universityId);
     }
 
 }
