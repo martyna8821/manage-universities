@@ -2,12 +2,15 @@ package pl.martyna.universities.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.martyna.universities.dao.IGenericDao;
 import pl.martyna.universities.dao.IUniversityDao;
+import pl.martyna.universities.model.FieldOfStudy;
+import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -33,6 +36,7 @@ public class UniversityService implements IUniversityService {
 
     @Override
     public void createUniversity(University university) {
+        university.setAddistionDate(LocalDateTime.now());
         universityDao.create(university);
     }
 
@@ -57,8 +61,13 @@ public class UniversityService implements IUniversityService {
     }
 
     @Override
-    public List<University> getUniversityStudents(UUID universityId) {
-        return universityDao.getUniversityStudents(UUID universityId);
+    public Set<Student> getUniversityStudents(UUID universityId) {
+        return universityDao.getUniversityStudents( universityId);
+    }
+
+    @Override
+    public List<FieldOfStudy> getUniversityFields(UUID universityId) {
+        return universityDao.getUniversityFields( universityId );
     }
 
 }

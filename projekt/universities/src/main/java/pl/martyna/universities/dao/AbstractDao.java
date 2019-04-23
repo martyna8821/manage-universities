@@ -1,12 +1,7 @@
 package pl.martyna.universities.dao;
 
-import net.bytebuddy.asm.Advice;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import pl.martyna.universities.model.University;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +10,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Transactional
-@CrossOrigin(origins = "http://localhost:4200")
 public abstract class AbstractDao<T extends Serializable> {
 
     private Class< T > classT;
@@ -50,6 +44,4 @@ public abstract class AbstractDao<T extends Serializable> {
         T entity = getById( entityId );
         delete( entity );
     }
-
-
 }

@@ -2,14 +2,11 @@ package pl.martyna.universities.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.lang.model.element.Name;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.*;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.*;
 
 @Entity(name = "University")
 @Table(name = "university")
@@ -22,8 +19,7 @@ public class University implements Serializable {
     @Column(name = "name")
     private String name;
     @Column(name = "additiontime")
-   @Temporal(TemporalType.TIMESTAMP)
-    private Date addistionDate;
+    private LocalDateTime addistionDate;
     @Column(name = "address")
     private String address;
     @Column(name = "email")
@@ -31,91 +27,27 @@ public class University implements Serializable {
     @Column(name = "phone")
     private String phone;
 
-    @OneToMany
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+                    CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "universityid")
-    private List<FieldOfStudy> fieldsOfStudy = new ArrayList<>();
+    private List<FieldOfStudy> fieldsOfStudy;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(fetch = FetchType.LAZY,
+                cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+                        CascadeType.DETACH, CascadeType.REFRESH})
     @JoinTable(
             name = "university_student",
-            joinColumns = { @JoinColumn(name = "id_u") },
-            inverseJoinColumns = { @JoinColumn(name = "id_s") }
+            joinColumns = @JoinColumn(name = "university_id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id")
     )
-    Set<Student> students = new HashSet<>();
+    private Set<Student> students;
 
-    public UUID getId() {
-        return id;
-    }
-
-    public University() {
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getAddistionDate() {
-        return addistionDate;
-    }
-
-    public void setAddistionDate(Date addistionDate) {
-        this.addistionDate = addistionDate;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public List<FieldOfStudy> getFieldsOfStudy() {
-        return fieldsOfStudy;
-    }
-
-    public void setFieldsOfStudy(List<FieldOfStudy> fieldsOfStudy) {
-        this.fieldsOfStudy = fieldsOfStudy;
-    }
-
-    public Set<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(Set<Student> students) {
-        this.students = students;
-    }
-
-    public void setId(int id){
-        this.id = UUID.fromString(Integer.toString(id));
-    }
-
-    @Override
-    public String toString(){
-        return "University";
+    public void addStudent(Student student){
+        if(students == null){
+            students = new TreeSet<>();
+        }
+        students.add(student);
     }
 }

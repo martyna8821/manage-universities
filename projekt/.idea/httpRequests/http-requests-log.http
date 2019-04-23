@@ -1,3 +1,19 @@
+GET http://localhost:8080/university/{universityId}/student
+
+###
+
+GET http://localhost:8080/university/e9784b99-d095-4ecd-b781-98577e011d44/student
+
+<> 2019-04-23T103932.200.json
+
+###
+
+GET http://localhost:8080/university/e9784b99-d095-4ecd-b781-98577e011d44/student
+
+<> 2019-04-23T103913.200.json
+
+###
+
 POST http://localhost:8080/student
 
 <> 2019-04-22T041006.400.json
@@ -261,24 +277,6 @@ GET http://localhost:8080/student
 POST http://localhost:8080/univesity
 
 <> 2019-04-11T030325.400.json
-
-###
-
-GET http://localhost:8080/university/26858e07-85c2-4619-96de-382ca3101fde
-
-<> 2019-04-11T030052.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-04-11T030024.200.json
-
-###
-
-GET http://localhost:8080/university
-
-<> 2019-03-30T111039.200.json
 
 ###
 

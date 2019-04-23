@@ -3,14 +3,15 @@ package pl.martyna.universities.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
+import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
 import pl.martyna.universities.service.IUniversityService;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 @RestController
@@ -66,11 +67,18 @@ public class UniversityController {
     }
 
     @GetMapping("university/{universityId}/student")
-    public ResponseEntity<List<Student>> getUniversityStudents(@PathVariable String universityId){
+    public ResponseEntity<Set<Student>> getUniversityStudents(@PathVariable String universityId){
         UUID universityIdToSearch = UUID.fromString(universityId);
-        List<Student> list =  universityService.getUniversityStudents(universityIdToSearch);
-        return new ResponseEntity<>(list, HttpStatus.OK);
+        Set<Student> students =  universityService.getUniversityStudents(universityIdToSearch);
+        return new ResponseEntity<>(students, HttpStatus.OK);
+    }
 
+    @GetMapping("university/{universityId}/field")
+    public ResponseEntity<List<FieldOfStudy>> getUniversityFields(
+            @PathVariable String universityId){
+        UUID universityIdToSearch = UUID.fromString(universityId);
+        List<FieldOfStudy> fields =  universityService.getUniversityFields(universityIdToSearch);
+        return new ResponseEntity<>(fields, HttpStatus.OK);
     }
 
 }

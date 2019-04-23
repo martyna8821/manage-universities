@@ -2,14 +2,10 @@ package pl.martyna.universities.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.TypeDef;
-import pl.martyna.universities.model.enums.PostgreSQLEnumType;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.UUID;
 
 @Entity

@@ -1,6 +1,5 @@
 package pl.martyna.universities.model;
 
-import com.sun.source.doctree.SerialDataTree;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Type;
@@ -11,9 +10,7 @@ import pl.martyna.universities.model.enums.StudentStatus;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 @Entity
 @Table(name = "student")
@@ -44,12 +41,13 @@ public class Student implements Serializable {
     @Column(columnDefinition = "studentstatus_t", name = "studentstatus")
     private StudentStatus studentStatus;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "university_student",
-            joinColumns = { @JoinColumn(name = "id_u") },
-            inverseJoinColumns = { @JoinColumn(name = "id_s") }
+            name = "student_field",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name ="field_id")
     )
-    Set<FieldOfStudy> fieldOfStudy = new HashSet<>();
+    Set<FieldOfStudy> fieldsOfStudy;
+
 
 }

@@ -3,15 +3,14 @@ package pl.martyna.universities.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
+import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 import pl.martyna.universities.service.IStudentService;
 
-import javax.validation.constraints.Max;
-import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 @RestController
@@ -62,6 +61,15 @@ public class StudentController {
         UUID idToDelete = UUID.fromString(studentd);
         studentService.deleteStudentById(idToDelete);
         return new ResponseEntity<>("Student deleted", HttpStatus.OK);
+    }
+
+    @GetMapping("student/{studentId}/field")
+    public ResponseEntity<Set<FieldOfStudy>> getStudentFields(
+            @PathVariable String studentId){
+
+        UUID idToSearch = UUID.fromString(studentId);
+        Set<FieldOfStudy> fields = studentService.getStudentFields(idToSearch);
+        return new ResponseEntity<>(fields, HttpStatus.OK);
     }
 
 }

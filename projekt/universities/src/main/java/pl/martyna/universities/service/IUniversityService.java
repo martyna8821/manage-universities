@@ -1,9 +1,12 @@
 package pl.martyna.universities.service;
 
+import pl.martyna.universities.model.FieldOfStudy;
+import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 public interface IUniversityService {
@@ -15,5 +18,6 @@ public interface IUniversityService {
     void deleteUniversity(University university);
     void deleteUniversityById(UUID univesityId);
     boolean checkIfExists(String name);
-    List<University> getUniversityStudents(UUID universityId);
+    Set<Student> getUniversityStudents(UUID universityId);
+    List<FieldOfStudy> getUniversityFields(UUID universityId);
 }

@@ -2,20 +2,22 @@ package pl.martyna.universities.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.martyna.universities.dao.IGenericDao;
+import pl.martyna.universities.dao.IStudentDao;
+import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
 public class StudentService implements IStudentService {
 
-    private IGenericDao<Student> studentDao;
+    private IStudentDao studentDao;
 
     @Autowired
-    public void setDao( IGenericDao< Student > daoToSet ){
+    public void setDao( IStudentDao daoToSet ){
         studentDao = daoToSet;
         studentDao.setClassT(Student.class);
     }
@@ -31,8 +33,7 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public void createStudent(Student student) {
-        studentDao.create(student);
+    public void createStudent(Student student) { studentDao.create(student);
     }
 
     @Override
@@ -48,5 +49,10 @@ public class StudentService implements IStudentService {
     @Override
     public void deleteStudentById(UUID studentId) {
         studentDao.deleteById(studentId);
+    }
+
+    @Override
+    public Set<FieldOfStudy> getStudentFields(UUID studentId) {
+        return studentDao.getFieldsOfStudies(studentId);
     }
 }
