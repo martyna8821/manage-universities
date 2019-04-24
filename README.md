@@ -1,6 +1,6 @@
 #Mange universities
 
-REST Api which allows to perform basic CRUD operations.
+REST API which allows to perform basic CRUD operations.
 ##Technologies
  * Java 11
  * Spring Boot, Spring MVC
