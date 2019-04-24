@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b42d50df-a798-4fb2-ab33-8de547be51e3",
+    "firstName": "on",
+    "lastName": "jbij",
+    "email": "kjn",
+    "phone": "7868",
+    "age": 87,
+    "gender": "FEMALE",
+    "studentStatus": "DEANS_LEAVE",
+    "fieldsOfStudy": []
+  },
+  {
+    "id": "c616d37b-98b9-4d77-8c44-7592cd581610",
+    "firstName": "Janina",
+    "lastName": "Nowak",
+    "email": "janinka@mail.com",
+    "phone": "6630263537",
+    "age": 21,
+    "gender": "FEMALE",
+    "studentStatus": "ACTIVE",
+    "fieldsOfStudy": [
+      {
+        "id": "b4a7297b-ef9c-48cf-9395-68c7528546d4",
+        "nameOfStudyField": "weirdo",
+        "startDate": "2019-03-19",
+        "studentsLimit": 200,
+        "grade": 4.0
+      }
+    ]
+  }
+]

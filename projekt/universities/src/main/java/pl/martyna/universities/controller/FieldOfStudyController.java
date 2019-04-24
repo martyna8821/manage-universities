@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.service.IFieldOfStudyService;
 
@@ -15,8 +16,13 @@ import java.util.UUID;
 @RequestMapping("/")
 public class FieldOfStudyController {
 
-    @Autowired
+    final
     IFieldOfStudyService fieldOfStudyService;
+
+    @Autowired
+    public FieldOfStudyController(IFieldOfStudyService fieldOfStudyService) {
+        this.fieldOfStudyService = fieldOfStudyService;
+    }
 
     @GetMapping("field")
     public  ResponseEntity<List<FieldOfStudy>> getAllFieldsOfStudy(){
@@ -27,14 +33,17 @@ public class FieldOfStudyController {
 
     @GetMapping("field/{fieldId}")
     public ResponseEntity<?> getFieldOfStudyById(@PathVariable String fieldId){
-        UUID idToSearch = UUID.fromString(fieldId);
+        UUID idToSearch;
+        try {
+            idToSearch =UUID.fromString(fieldId);
+        }catch (IllegalArgumentException ex){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Incorrect id");
+        }
         Optional<FieldOfStudy> foundField = fieldOfStudyService.getFieldOfStudyById(idToSearch);
-        if(foundField.isPresent()){
-            return new ResponseEntity<>(foundField.get(), HttpStatus.OK);
-        }
-        else{
-            return new ResponseEntity<>("Field of study not found", HttpStatus.NOT_FOUND);
-        }
+        return foundField.<ResponseEntity<?>>map(fieldOfStudy ->
+                new ResponseEntity<>(fieldOfStudy, HttpStatus.OK))
+                 .orElseGet(() ->
+                    new ResponseEntity<>("Field of study not found", HttpStatus.NOT_FOUND));
     }
 
     @PostMapping("field")

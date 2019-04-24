@@ -3,6 +3,7 @@ package pl.martyna.universities.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.martyna.universities.dao.IUniversityDao;
+import pl.martyna.universities.exception.NotFoundException;
 import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
@@ -25,8 +26,8 @@ public class UniversityService implements IUniversityService {
     }
 
     @Override
-    public Optional<University> getUniversityById(UUID univesityId) {
-        return Optional.ofNullable(universityDao.getById(univesityId));
+    public Optional<University> getUniversityById(UUID universityId) {
+        return Optional.ofNullable(universityDao.getById(universityId));
     }
 
     @Override
@@ -51,22 +52,17 @@ public class UniversityService implements IUniversityService {
     }
 
     @Override
-    public void deleteUniversityById(UUID univesityId) {
-        universityDao.deleteById(univesityId);
+    public void deleteUniversityById(UUID universityId) {
+        universityDao.deleteById(universityId);
     }
 
     @Override
-    public boolean checkIfExists(String name) {
-        return false;
-    }
-
-    @Override
-    public Set<Student> getUniversityStudents(UUID universityId) {
+    public Set<Student> getUniversityStudents(UUID universityId) throws NotFoundException {
         return universityDao.getUniversityStudents( universityId);
     }
 
     @Override
-    public List<FieldOfStudy> getUniversityFields(UUID universityId) {
+    public List<FieldOfStudy> getUniversityFields(UUID universityId) throws NotFoundException {
         return universityDao.getUniversityFields( universityId );
     }
 

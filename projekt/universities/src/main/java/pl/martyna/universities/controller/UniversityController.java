@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import pl.martyna.universities.exception.NotFoundException;
 import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
@@ -20,8 +22,12 @@ import java.util.UUID;
 @CrossOrigin(origins = "http://localhost:4200")
 public class UniversityController {
 
+    private final IUniversityService universityService;
+
     @Autowired
-    private IUniversityService universityService;
+    public UniversityController(IUniversityService universityService) {
+        this.universityService = universityService;
+    }
 
     @GetMapping("university")
     public ResponseEntity<List<University>> getAllUniversities() {
@@ -31,14 +37,15 @@ public class UniversityController {
 
     @GetMapping("university/{universityId}")
     public ResponseEntity<?> getUniversityById(@PathVariable String universityId) {
-        UUID idToSearch = UUID.fromString(universityId);
-        Optional<University> foundUniversity = universityService.getUniversityById(idToSearch);
-
-        if (foundUniversity.isPresent()) {
-            return new ResponseEntity<>(foundUniversity.get(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("University not found", HttpStatus.NOT_FOUND);
+        UUID idToSearch;
+        try {
+            idToSearch = UUID.fromString(universityId);
+        }catch (IllegalArgumentException ex){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Incorrect id");
         }
+
+        Optional<University> foundUniversity = universityService.getUniversityById(idToSearch);
+        return foundUniversity.<ResponseEntity<?>>map(university -> new ResponseEntity<>(university, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>("University not found", HttpStatus.NOT_FOUND));
     }
     @PostMapping("university")
     public University createUniversity(@RequestBody University university){
@@ -67,15 +74,22 @@ public class UniversityController {
     }
 
     @GetMapping("university/{universityId}/student")
-    public ResponseEntity<Set<Student>> getUniversityStudents(@PathVariable String universityId){
-        UUID universityIdToSearch = UUID.fromString(universityId);
-        Set<Student> students =  universityService.getUniversityStudents(universityIdToSearch);
+    public ResponseEntity<Set<Student>> getUniversityStudents(@PathVariable String universityId)
+            throws NotFoundException{
+
+        UUID idToSearch;
+        try {
+            idToSearch =UUID.fromString(universityId);
+        }catch (IllegalArgumentException ex){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Incorrect id");
+        }
+        Set<Student> students =  universityService.getUniversityStudents(idToSearch);
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
 
     @GetMapping("university/{universityId}/field")
     public ResponseEntity<List<FieldOfStudy>> getUniversityFields(
-            @PathVariable String universityId){
+            @PathVariable String universityId) throws NotFoundException {
         UUID universityIdToSearch = UUID.fromString(universityId);
         List<FieldOfStudy> fields =  universityService.getUniversityFields(universityIdToSearch);
         return new ResponseEntity<>(fields, HttpStatus.OK);

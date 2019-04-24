@@ -1,3 +1,13 @@
+DELETE http://localhost:8080/student/{studentId}
+
+###
+
+GET http://localhost:8080/student
+
+<> 2019-04-24T091604.200.json
+
+###
+
 GET http://localhost:8080/university/{universityId}/student
 
 ###
@@ -265,18 +275,6 @@ GET http://localhost:8080/university
 GET http://localhost:8080/university
 
 <> 2019-04-12T074056.500.json
-
-###
-
-GET http://localhost:8080/student
-
-<> 2019-04-11T031340.200.json
-
-###
-
-POST http://localhost:8080/univesity
-
-<> 2019-04-11T030325.400.json
 
 ###
 

@@ -1,6 +1,7 @@
 package pl.martyna.universities.dao;
 
 import org.springframework.stereotype.Repository;
+import pl.martyna.universities.exception.NotFoundException;
 import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 import pl.martyna.universities.model.University;
@@ -17,12 +18,23 @@ public class UniversityDao extends AbstractDao<University>
     public Set<Student> getUniversityStudents(UUID universityId) {
 
         University foundUniversity = entityManager.find(University.class, universityId);
-        return foundUniversity.getStudents();
+        if(foundUniversity == null){
+            throw new NotFoundException("University not found");
+        }
+        else{
+            return foundUniversity.getStudents();
+        }
+
     }
 
     @Override
     public List<FieldOfStudy> getUniversityFields(UUID universityId) {
         University foundUniversity = entityManager.find(University.class, universityId);
-        return foundUniversity.getFieldsOfStudy();
+        if(foundUniversity == null){
+            throw new NotFoundException("University not Found");
+        }
+        else{
+            return foundUniversity.getFieldsOfStudy();
+        }
     }
 }

@@ -46,7 +46,7 @@ public class University implements Serializable {
 
     public void addStudent(Student student){
         if(students == null){
-            students = new TreeSet<>();
+            students = new HashSet<>();
         }
         students.add(student);
     }

@@ -3,6 +3,7 @@ package pl.martyna.universities.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.martyna.universities.dao.IStudentDao;
+import pl.martyna.universities.exception.NotFoundException;
 import pl.martyna.universities.model.FieldOfStudy;
 import pl.martyna.universities.model.Student;
 
@@ -52,7 +53,9 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public Set<FieldOfStudy> getStudentFields(UUID studentId) {
+    public Set<FieldOfStudy> getStudentFields(UUID studentId)
+            throws NotFoundException {
+
         return studentDao.getFieldsOfStudies(studentId);
     }
 }
